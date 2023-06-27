@@ -15,5 +15,10 @@
                 <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
             </ul>
         </nav>
+        <div>
+            <img src="/img/@ViewBag.partido.Logo">
+            <h1>Nombre: @ViewBag.partido.Nombre</h1>
+            <a href="@ViewBag.partido.SitioWeb">Sitio web</a>
+        </div>
     </body>
 </html>
