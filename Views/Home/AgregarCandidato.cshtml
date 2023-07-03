@@ -8,12 +8,20 @@
         <title>Agregar candidato</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <a href='@Url.Action("Index")'><img margin="5cm" height="50rem" width="110rem" src="img/Titulo.png"></a>
-                <li><a href='@Url.Action("Elecciones")'>Elecciones 2023</a></li>
-                <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
-            </ul>
-        </nav>
+    <form method=post action='@Url.Action("AgregarCandidato")'>
+        <select name="IdPartido">
+            <option>YPF</option>
+            <option>PSG</option>
+            <option>CARP</option>
+            <option>PJM</option>
+    </form>
+    <form method=post action >
+        <input type="IdCandidato"/>
+        <input type="Apellido"/>
+        <input type="Nombre"/>
+        <input type="FechaNacimiento"/>
+        <input type="Foto"/>
+        <input type="Postulacion"/>
+    </form>
     </body>
 </html>

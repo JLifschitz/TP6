@@ -8,17 +8,11 @@
         <title>Detalles de partido</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <a href='@Url.Action("Index")'><img margin="5cm" height="50rem" width="110rem" src="img/Titulo.png"></a>
-                <li><a href='@Url.Action("Elecciones")'>Elecciones 2023</a></li>
-                <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
-            </ul>
-        </nav>
         <div>
             <img src="/img/@ViewBag.partido.Logo">
             <h1>Nombre: @ViewBag.partido.Nombre</h1>
             <a href="@ViewBag.partido.SitioWeb">Sitio web</a>
+            <a href='@Url.Action("AgregarCandidato")'>Haga clic aquí para agregar un candidato 2023</a>
         </div>
-    </body>
+    </body>  
 </html>

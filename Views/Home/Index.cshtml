@@ -8,17 +8,10 @@
         <title>Home</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href='@Url.Action("Index")'><img height="8 0rem" width="140rem" src="img/bandera.jpg"></a></li>
-                <li><a href='@Url.Action("Elecciones")'>Elecciones 2023</a></li>
-                <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
-            </ul>
-        </nav>
         @foreach (Partido item in ViewBag.listPartidos)
         {
             <div>
-                <a href='@Url.Action("VerDetallePartido(item.idPartido)")'><img src="img/@item.Logo"></a>
+                <a href='@Url.Action("VerDetallePartido(item.idPartido)")'><img src="/img/@item.Logo"></a>
                 <h1>@item.Nombre</h1>
             </div>
         }
