@@ -12,9 +12,11 @@
             <img src="@ViewBag.partido.Logo">
             <h1>Nombre: @ViewBag.partido.Nombre</h1>
             <a href="@ViewBag.partido.SitioWeb"><button>Sitio web</button></a>
+             <a href='@Url.Action("AgregarCandidato", new{id = ViewBag.partido.IdPartido})'><button>agregar un candidato 2023</button></a>
             <h1>Creacion: @ViewBag.partido.FechaFundacion.ToShortDateString()</h1>
             <h1>Cantidad de senadores: @ViewBag.partido.CantSenadores</h1>
             <h1>Cantidad de diputados: @ViewBag.partido.CantDiputados</h1>
+           
             <br>
             <div class="listado">
                 @foreach (Candidato item in ViewBag.listCandidatos)
@@ -25,8 +27,6 @@
                     </div>
                 }
             </div>
-            <br>
-            <a href='@Url.Action("AgregarCandidato", new{id = ViewBag.partido.IdPartido})'><button>agregar un candidato 2023</button></a>
         </div>
     </body>  
 </html>
