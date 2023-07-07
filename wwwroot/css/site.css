@@ -15,7 +15,78 @@ html
 
 body
 {
-  margin: 20px 60px 0px 20px;
+  margin: 0px;
+  padding: 0%;
+  background-image: url(https://as1.ftcdn.net/v2/jpg/02/22/95/16/1000_F_222951673_X4qEIYQSzakyEXGFRyXdU11zUjR4YWiv.jpg);
+  background-size: cover;
+
+}
+
+h3
+{
+  color: black;
+}
+
+img
+{
+  height: 30rem;
+  width: 30rem;
+}
+
+nav ul
+{
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  background-color: #1276ab;
+}
+  
+nav li 
+{
+  float: left;
+  height: 3.3rem;
+  margin: 0 auto;
+}
+  
+nav li a
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav img
+{
+  align-content: center;
+  height: 50px;
+  width: 70px;
+}
+
+.listado
+{
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.elem
+{
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+}
+
+.elem img
+{
+  height: 30rem;
+  width: 30rem;
 }
 
 footer

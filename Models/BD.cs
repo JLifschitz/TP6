@@ -6,10 +6,10 @@ static class BD
     private static string _connectionString = @"Server=localhost; DataBase=Elecciones2023; Trusted_Connection=True;";
     public static void AgregarCandidato(Candidato can)
     {
-        string sql = "Insert into Candidatos(IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) Values (@pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
+        string sql = "Insert into Candidatos(IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) Values (@IdPartido, @Apellido, @Nombre, @FechaNacimiento, @Foto, @Postulacion)";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(sql, new{can});
+            db.Execute(sql, can);
         }
     }
         public static void EliminarCandidato(int id)
@@ -46,7 +46,7 @@ static class BD
        public static List<Partido> ListarPartidos()
     {
         List<Partido> devolver = new List<Partido>();
-        string sql = "Select Nombre From Partidos Order by Nombre";
+        string sql = "Select * From Partidos Order by Nombre";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             devolver = db.Query<Partido>(sql).ToList();
@@ -57,7 +57,7 @@ static class BD
         public static List<Candidato> ListarCandidatos(int partido)
     {
         List<Candidato> devolver =  new List<Candidato>();
-        string sql = "Select Nombre, Apellido From Candidatos where IdPartido = @ipartido Order by Nombre";
+        string sql = "Select * From Candidatos where IdPartido = @ipartido Order by Nombre";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             devolver = db.Query<Candidato>(sql, new {ipartido = partido}).ToList();

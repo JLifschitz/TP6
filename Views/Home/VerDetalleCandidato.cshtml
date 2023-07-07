@@ -8,6 +8,13 @@
         <title>Detalles de candidato</title>
     </head>
     <body>
-
+        <div>
+            <img src="@ViewBag.candidato.Foto">
+            <h1>Apellido: @ViewBag.candidato.Apellido</h1>
+            <h1>Nombre: @ViewBag.candidato.Nombre</h1>
+            <h1>Fecha de nacimiento: @ViewBag.candidato.FechaNacimiento.ToShortDateString()</h1>
+            <h1>Postulacon: @ViewBag.candidato.Postulacion</h1>
+        </div>
+            <a href='@Url.Action("VerDetallePartido", new{id = ViewBag.candidato.IdPartido})'><button>Volver</button></a>
     </body>
 </html>

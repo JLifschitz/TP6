@@ -8,12 +8,14 @@
         <title>Home</title>
     </head>
     <body>
-        @foreach (Partido item in ViewBag.listPartidos)
-        {
-            <div>
-                <a href='@Url.Action("VerDetallePartido(item.idPartido)")'><img src="/img/@item.Logo"></a>
-                <h1>@item.Nombre</h1>
-            </div>
-        }
+        <div class="listado">
+            @foreach (Partido item in ViewBag.listPartidos)
+            {
+                <div class="elem">
+                    <a href='@Url.Action("VerDetallePartido", new{id = item.IdPartido})'><img src="@item.Logo"></a>
+                    <h1>@item.Nombre</h1>
+                </div>
+            }
+        </div>
     </body>
 </html>

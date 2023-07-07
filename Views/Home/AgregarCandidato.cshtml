@@ -8,20 +8,14 @@
         <title>Agregar candidato</title>
     </head>
     <body>
-    <form method=post action='@Url.Action("AgregarCandidato")'>
-        <select name="IdPartido">
-            <option>YPF</option>
-            <option>PSG</option>
-            <option>CARP</option>
-            <option>PJM</option>
-    </form>
-    <form method=post action >
-        <input type="IdCandidato"/>
-        <input type="Apellido"/>
-        <input type="Nombre"/>
-        <input type="FechaNacimiento"/>
-        <input type="Foto"/>
-        <input type="Postulacion"/>
+    <form method=post action='@Url.Action("GuardarCandidato")'>
+        <input type="hidden" name="IdPartido" value="@ViewBag.idPartido">
+        <input type="text" name="Apellido" placeholder="Apellido" required/>
+        <input type="text" name="Nombre" placeholder="Nombre" required/>
+        <input type="date" name="FechaNacimiento" placeholder="Fecha de nacimiento" required/>
+        <input type="text" name="Foto" placeholder="link de la foto" required/>
+        <input type="text" name="Postulacion" placeholder="Postulacion" required/>
+        <input type="submit" value="Agregar">
     </form>
     </body>
 </html>
